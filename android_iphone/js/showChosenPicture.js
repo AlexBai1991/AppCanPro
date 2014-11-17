@@ -3,7 +3,7 @@
  * author: quote
  */ 
 
-function showChosenPic(disPic, imgFile) {
+function showChosenPic (disPic, imgFile) {
     var pic = document.getElementById("img"),
         file = document.getElementById("chooseimg");
  
@@ -35,7 +35,7 @@ function showChosenPic(disPic, imgFile) {
      }
  }
  
- function html5Reader(disPic, file){
+ function html5Reader (disPic, file){
      var file = file.files[0];
      var reader = new FileReader();
      reader.readAsDataURL(file);

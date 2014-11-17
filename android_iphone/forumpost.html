@@ -4,9 +4,9 @@
         <title></title>
         <meta charset="utf-8">
         <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="css/project/ui-res-v3.css">
-    <link rel="stylesheet" href="css/project/ui-color-v3.css">
-    <link rel="stylesheet" href="css/project/ui-btn-v3.css">
+    	<link rel="stylesheet" href="css/project/ui-res-v3.css">
+    	<link rel="stylesheet" href="css/project/ui-color-v3.css">
+    	<link rel="stylesheet" href="css/project/ui-btn-v3.css">
 	    <link rel="stylesheet" href="css/ui-btn.css">
 	    <link rel="stylesheet" href="css/ui-input.css">
         <link rel="stylesheet" href="css/ui-base.css">
@@ -19,50 +19,37 @@
         <script src="js/main.js"></script>
         <script src="js/zy_json.js"></script>
         <script src="js/showChosenPicture.js"></script>
-       <script>
-        </script>
     </head>
     <body class="um-vp c-wh" ontouchstart >
         <div id="page_0" class="up ub ub-ver" tabindex="0" >
             <!--header开始-->
             <div id="header" class="uh c-blu t-wh ub">
-            	<!--按钮开始-->
 				<div onclick="uexWindow.close('-1')" class="btn uinn uc-a bt-icon12 umh1-7 umw1-7 ub-img4"></div>
-				<!--按钮结束-->
                 <h1 class="ut ub-f1 ulev0 ut-s tx-c" tabindex="0">论坛发帖</h1>
-				<!--按钮开始-->
 				<div onclick="postForumDetail()" class="btn uinn uc-a bt-icon6 umh1-7 umw1-7 ub-img4"></div>
-				<!--按钮结束-->
             </div>
             <!--header结束--><!--content开始-->
             <div id="content" class="ub-f1 tx-l t-bla">
                 <div class="ub ub-ver">
                 	<div class="uinn ubb b-gra">
-						<!--文本开始-->
 						<div class="ub t-bla ulab">  
 						 	<div class="ub-f1 uinput uinn1 ub ub-ver">  
 						 		<input placeholder="标题"  type="text" class="" id="title">   
 						  	</div>
 						</div>
-						<!--文本结束-->
                 	</div>
                 	<div class="uinn">
-                		<!--文本开始-->
 						<div class="ub t-bla ulab"> 
 						  	<div class="ub-f1 uinput uinn1 ub ub-ver umh8">  
 						 		<textarea placeholder="内容"  name="area1" class="ub-f1" id="postcontent"></textarea> 
 						 	</div>
 						</div>
-						<!--文本结束-->
                 	</div>
 					<div class="uinn2">
 						 <div id="upimg" class="ub ub-pc ub-ac ub-img" style="background-color:silver;width:5em;height:5em;">
 						 	<div id="plusimg" class="ub-img" style="background-image:url('css/images/add-icon.png');width:2em;height:2em;"></div>
 						 </div>
 					</div>
-                	<!--<div class="uinn">
-						<div ontouchstart="zy_touch('btn-act')" onclick="postForumDetail()" class="btn uinn c-blu2 c-m2 uc-a1 t-wh">发表帖子</div>
-                	</div>-->
 				 	<div id="reply" style="position:fixed;left:0;bottom:0;display:block;width:100%;">
 				        <div class="ub ub-ver c-gra">
 							<div ontouchstart="zy_touch('btn-act')" onclick="openActionSheet()" class="btn uinn5 c-siv c-m2 uc-a1">选择图片</div>

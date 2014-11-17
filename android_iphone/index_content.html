@@ -24,12 +24,7 @@
             window.jq = Zepto;
         </script>
         <style>
-            .news img {
-                width: 100%;
-                height: 100%;
-            }
-        </style>
-		<style>
+            .news img {width: 100%; height: 100%;}
 			#notice {width:100%;height:3em;position:relative;}
 			#notice ul {width:100%;position:absolute;left:0;top:0;}
 			#notice ul li {width:93%;height:1.5em;text-align:center;margin:0 auto;border:1px solid silver;}
@@ -38,7 +33,6 @@
     <body class="um-vp" ontouchstart>
         <div class="news ub uof" style="margin-bottom:0.5em;">
             <div id='slider' class='ub ub-fh'>
-                <!--滑块-->
                 <div class='ub-fh'>
                     <img src="image/ji.jpg">
                 </div>
@@ -144,15 +138,6 @@
                    <br>成果管理
                 </div>
             </div>
-			<!--
-            <div class=" ub ub-f1 ub-ver ub-ac  uinn5">
-                <div class="ub-img" style="width:3em;height:3em;" onclick="">
-                </div>
-                <div class="u-f1 tx-c ulev-1">
-                    　
-                </div>
-            </div>
-			-->
         </div>
         <!--块容器结束，用于显示宫格按钮-->
     </body>
@@ -219,7 +204,7 @@
 			oUl.style.height = 200+'px';
 			//设置定时器
 			setInterval(function (){
-//				alert(oUl.offsetTop);
+				//alert(oUl.offsetTop);
 				if (oUl.offsetTop == 0) {
 					for(var i=0;i<oLi.length;i++){
 						if(i == 1){
