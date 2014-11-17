@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+		<link rel="stylesheet" href="css/ui-res.css">
+        <script src="js/zy_control.js">
+        </script>
+        <script src="js/zy_click.js">
+        </script>
+        <script>
+        </script>
+    </head>
+    <body class="um-vp c-wh" ontouchstart>
+        <div id="page_0" class="up ub ub-ver" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="uh c-org c-m1 t-wh">
+                <h1 class="ut ulev0 ut-s tx-c" tabindex="0">AppCan</h1>
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l t-bla ub-img6 res10">
+                 <span>选择文件</span><br/>
+				 <input type="button" value="Open" onclick="getFile()"/><br/>
+				 <span>上传</span><br/>
+				 <input type="button" value="Upload" onclick="upload()"/><br/>
+				 <span>进度</span><br/>
+				 <input type="text" id="percent" value="0%"/>
+            </div>
+            <!--content结束--><!--footer开始-->
+            <div id="footer" class="uf c-m2 c-bla t-wh">
+                <h1 class="ut ulev-2 tx-c" tabindex="0">(c) Copyright 3G2WIN and others 2011.
+                    <br>
+                    All rights reserved.
+                </h1>
+            </div>
+            <!--footer结束-->
+        </div>
+    </body>
+    <script>
+     var file = '',opId = 100;
+	 window.uexOnload = function(type){
+	   if(!type){
+	     uexUploaderMgr.cbCreateUploader = cbCreateUploader;
+	     uexUploaderMgr.onStatus = onStatus;
+	   }
+	 }
+	 //选择上传文件
+	 function getFile(){
+	   uexFileMgr.cbExplorer = function(opId,dataType,data){
+	     if(dataType == 0){
+	       file = data;
+		   alert(file);
+	     }
+	   }
+	   uexFileMgr.explorer('');
+	 }
+	 //创建上传对象回调
+	 function cbCreateUploader(opId,dataType,data){
+	   if(dataType == 2){
+	     //上传文件到服务器
+		 uexUploaderMgr.uploadFile('101',file,'fileName','1');
+	    alert('回调成功');
+	    
+	   }
+	 }
+	 //上传文件回调函数
+	 function onStatus(opId,fileSize, percent,serverPath,status){
+	 	alert('serverPath'+serverPath);
+	   switch(status) {
+	     case 0:
+	       document.getElementById('percent').value = percent+"%";
+	       break;
+	     case 1:
+	       alert("上传成功，服务器路径为"+serverPath);
+	       uexUploaderMgr.closeUploader(opId);
+	       break;
+	     case 2:
+	       alert("上传失败!");
+	       uexUploaderMgr.closeUploader(opId);
+	       break;
+	     default: 
+	       break;
+	   }
+	 }
+	 //创建一个上传对象
+	 function upload(){
+	   uexUploaderMgr.createUploader(opId,'http://10.108.86.116:8080/BniProject/HandBNIPro/bni/newsimage/');
+	   alert('创建成功!');
+	 }
+    </script>
+</html>

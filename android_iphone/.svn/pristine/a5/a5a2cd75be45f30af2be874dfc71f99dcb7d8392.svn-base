@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/project/ui-res-v3.css">
+    <link rel="stylesheet" href="css/project/ui-color-v3.css">
+    <link rel="stylesheet" href="css/project/ui-btn-v3.css">
+    	<link rel="stylesheet" href="css/ui-btn.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-color-v3.css">
+        <link rel="stylesheet" href="css/ui-res.css">
+		<link rel="stylesheet" href="css/project/style.css">
+        <link rel="stylesheet" href="css/pictureShow.css">
+        <link rel="stylesheet" href="app/css/ui-scm.css">
+        <script src="js/zy_control.js">
+        </script>
+        <script src="js/zy_click.js">
+        </script>
+        <script src="js/main.js">
+        </script>
+    </head>
+    <body class="um-vp" ontouchstart>
+        <div id="page_0" class="up ub ub-ver" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="ub uh t-wh c-blu">
+                <div class="umw4 ub ub-ac ub-pj" ontouchstart="zy_touch()" onclick="uexWindow.open('setting','0','setting.html','9','','','0')">
+                	<!--按钮开始-->
+					<div class="btn uinn uc-a bt-icon8 umh1-7 umw1-7 ub-img4"></div>
+					<!--按钮结束-->
+
+				</div>
+				<h1 class="ut ub-f1 ulev0 ut-s tx-c">掌上BNI</h1>
+                <div class="umw4" ontouchstart="zy_touch()" onclick="">
+				</div>
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1">
+            </div>
+            <!--content结束--><!--footer开始  -->
+            <div id="footer" class="uf c-bla c-m2 t-wh">
+                <h3 class="ut ub-f1 ulev-1 ut-s tx-c">Copyright©2014 BNI BUPT</h3>
+            </div>
+        </div>
+    </body>
+    <script>
+        zy_init();
+        window.uexOnload = function(type){
+            if (!type){
+				monitorReturnKey();	//监听返回键
+				//getpushtk();	    //push消息推送
+                zy_con("content", "index_content.html", 0, $$("header").offsetHeight);
+            }
+            window.onorientationchange = window.onresize = function(){
+                zy_resize("content", 0, $$("header").offsetHeight);
+            }
+        }
+		//监听是否返回键按下
+		function monitorReturnKey(){
+			var platform = uexWidgetOne.getPlatform();
+			if(platform){
+				uexWindow.onKeyPressed = function (keyCode){
+					if(keyCode == 0){
+						uexWidgetOne.exit();
+					}
+				}
+				uexWindow.setReportKey(0,1);
+			}
+		}
+		//push消息推送
+		function getpushtk(){
+	        uexDevice.cbGetInfo = function(opCode, dataType, data){
+		        if(data != ""){
+	                var obj = eval('('+data+')');
+	                var tk = obj.deviceToken;
+	                tk = tk.replace(/ /g,"");
+	                pushios();
+		        }
+	        }
+	        uexDevice.getInfo('11');	//得到令牌
+		}
+		function pushios(){
+	        uexWidget.setPushNotifyCallback("cbNotify");
+	        setdeviceToken();
+	        uexWidget.cbGetPushInfo = function(opCode, dataType, data){
+	 	       alert("接收到的推送消息:"+data);
+			   //pushopen(data);
+	        }
+	        uexWidget.getPushInfo();
+		}
+		function setdeviceToken(){
+	         uexWidget.setPushInfo("appkunming.com","");
+		}
+		function cbNotify(){
+	        uexWidget.getPushInfo();
+		}
+		function pushopen(str){
+	        if(str.length == 4 || str.length == 6){return;}
+	        //PUSH格式：{"type":"news","id":0}//type值为：news|prdouct  ID值为要打开的内容ID
+	        if(str.substring(0,1) != "{"){uexWindow.alert("推送详情：",str,"确定");return;}
+	        var json = eval("["+str+"]");
+	        if(json.length == 1){
+	            if(json[0].type == "news"){opennews(json[0].id,'news_top.html');return;}
+	            if(json[0].type == "product"){opennews(json[0].id,'product_top.html');return;}
+	        }
+		}
+    </script>
+</html>

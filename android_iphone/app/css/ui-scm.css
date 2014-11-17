@@ -1,0 +1,25 @@
+
+/*全局*/
+body{ background-color:white}
+.main-body {display:none;}
+.header,.main-body,.footer{ width:100%;}
+
+/*上导航栏*/
+.header{ height:2.5em; overflow:hidden; background-color:#39678E; -webkit-background-size:100% 100%; text-align:center; z-index:999;}
+.header .title{ margin-top:0em; font-size:1em; font-weight:bold; color:rgb(73,39,12);}
+#header img{
+	width:2.5em;height:1.8em; no-repeat;margin-top:0.3em;margin-left:0.3em;
+}
+
+/*下导航栏*/
+.footer{
+	height:2.8em; overflow:hidden; background:url(../img/footer_bg.png) no-repeat; -webkit-background-size:100% 100%; text-align:center; z-index:999;
+}
+/*中心介绍页*/
+.lab img{width:100%;}
+.lab h2{text-align:center;}
+.lab p{
+	text-indent:2em;
+	font-stretch:expanded;
+ }
+

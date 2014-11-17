@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+<title>
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/ui-img.css">
+    <link rel="stylesheet" href="css/ui-res.css">
+    <link rel="stylesheet" href="css/ui-list.css">
+	<link rel="stylesheet" href="css/ui-base.css">
+	<link rel="stylesheet" href="css/ui-box.css">
+	<link rel="stylesheet" href="css/ui-color.css">
+	<script src="js/zy_control.js"></script>
+	<script src="js/zy_tmpl.js"></script>
+	<script src="js/zy_json.js"></script>
+	<script src="js/zy_click.js"></script>
+	<script src="js/main.js"></script>
+	<script></script>
+</head>
+<body class="um-vp" ontouchstart>
+	<!--列表开始-->
+	<div id="list">
+		
+	</div>
+	<!--列表结束-->
+</body>
+<script>
+	zy_init();
+	window.uexOnload = function(type){
+		if (!type) {
+			uexWindow.setBounce("1");
+			uexWindow.showBounceView("0", "#FFF", "1");
+			uexWindow.showBounceView("1", "#FFF", "1");
+			uexWindow.notifyBounceEvent('0', '1');
+			uexWindow.onBounceStateChange = function(t, s){
+				if (t == 0) {
+					if (s == 2) {
+						//刷新帖子
+						refresh();
+						uexWindow.resetBounceView(t);
+					}
+				}
+			}
+			getForumList();
+		}
+	}
+	var url = 'http://10.108.90.35:8080/zendproject/TestProject/bni/ReturnForum.php?action=getForumList';
+	var tmpl = '<div class="">\
+				    <ul class="uinn ub ub-ver uba b-gra t-bla c-wh" style="margin:0.3em auto;width:95%;">\
+			            <li class="ulev1 uinn" ontouchstart="zy_touch(\'btn-act\')" onclick="getForumDetail(event)" id="${id}_${title}">${title}</li>\
+						<div class="ub">\
+				            <div class="ub ub-f1 ub-ver t-gra ulev-2">\
+								<div class="ub umh1 tx-l">\
+				                	<div class="ub-con">　发帖:${user}</div>\
+				            	</div>\
+					    	</div>\
+				            <div class="ub ub-f1 ub-ver t-gra ulev-2">\
+								<div class="ub umh1 tx-c">\
+				                	<div class="ub-con">回复数:${replynum}</div>\
+				            	</div>\
+					    	</div>\
+				            <div class="ub ub-f1 ub-ver t-gra ulev-2">\
+								<div class="ub umh1 tx-r">\
+				                	<div class="ub-con">发表于:${time}</div>\
+				            	</div>\
+					    	</div>\
+						</div>\
+					</ul>\
+				</div>';
+	//获取帖子列表信息
+	function getForumList(){
+		$.getJSON(url,function(data){
+			var list = data;
+			var str = zy_tmpl(tmpl,list,zy_tmpl_count(list));
+			setHtml('list',str);
+		},'json',null,'GET',null,false);
+	}
+	//刷新帖子列表信息
+	function refresh(){
+		$.clearLS(url);
+		getForumList();
+	}
+	//获取帖子的具体id
+	function getForumDetail(event){
+		if(window.localStorage['id']){
+			var ForumDetailId = window.localStorage['id'];
+			var ForumDetailTitle = window.localStorage['title'];
+		}else{
+			var ForumDetailIdTitle = event.target.id;
+			var ForumDetailId = ForumDetailIdTitle.split("_")[0];
+			var ForumDetailTitle = ForumDetailIdTitle.split("_")[1];
+			window.localStorage['id'] = ForumDetailId;
+			window.localStorage['title'] = ForumDetailTitle;
+		}
+		uexWindow.evaluateScript('listdetail','0','refresh()');
+		uexWindow.open('listdetail',0,'listdetail.html',10,'','',0);
+	}
+</script>
+</html>

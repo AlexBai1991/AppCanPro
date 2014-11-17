@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <title>下载功能</title>
+        <script type="text/javascript">
+            var inOpCode = 1;
+            //创建下载对象
+            function download(){
+                uexDownloaderMgr.createDownloader(inOpCode);
+            }
+            window.uexOnload = function(){
+                //下载状态监听方法
+                uexDownloaderMgr.onStatus = function(opCode, fileSize, percent, status){
+                    switch (status) {
+                        case 0://下载过程中
+                            document.getElementById('percentage').innerHTML = "文件大小：" + fileSize + "字节<br>下载进度：" + percent;
+                            break;
+                        case 1://下载完成
+                            alert("下载完成");
+                            uexDownloaderMgr.closeDownloader(opCode);//下载完成要关闭下载对象
+                            break;
+                        case 2://下载失败
+                            alert("下载失败");
+                            uexDownloaderMgr.closeDownloader(opCode);//下载失败要关闭下载对象
+                            break;
+                    }
+                }
+                var cText = 0;
+                var cJson = 1;
+                var cInt = 2;
+                //创建下载对象的回调方法
+                uexDownloaderMgr.cbCreateDownloader = function(opCode, dataType, data){
+                    switch (dataType) {
+                        case cText:
+                            alert("uex.cText");
+                            break;
+                        case cJson:
+                            alert("uex.cJson");
+                            break;
+                        case cInt:
+                            if (data == 0) {
+                                alert("创建成功");
+                                uexDownloaderMgr.download(inOpCode, document.getElementById('downloadPath').value, document.getElementById('savedPath').value, '1');
+                            }
+                            else {
+                                alert("创建失败");
+                            }
+                            break;
+                        default:
+                            alert("error");
+                    }
+                }
+                uexWidgetOne.cbError = function(opCode, errorCode, errorInfo){
+                    alert(errorInfo);
+                }
+                // 通过下载url获取下载对象的信息的回调方法
+                uexDownloaderMgr.cbGetInfo = function(opCode, dataType, data){
+                    switch (dataType) {
+                        case cText:
+                            alert("uex.cText");
+                            break;
+                        case cJson:
+                            if (data == null || data.length == 0) {
+                                alert("无数据");
+                                return;
+                            }
+                            alert(data);
+                            var info = eval('(' + data + ')');
+                            document.getElementById('fileInfo').innerHTML = "文件路径：" + info.savePath + "<br>文件大小：" + info.fileSize + "<br>已下载：" + info.currentSize + "<br>下载时间：" + info.lastTime;
+                            break;
+                        case cInt:
+                            alert("uex.cInt");
+                            break;
+                        default:
+                            alert("error");
+                    }
+                }
+            }
+            //通过操作ID关闭下载对象
+            function closeDownload(){
+                uexDownloaderMgr.closeDownloader(inOpCode);
+            }
+            //通过路径获取下载的文件信息
+            function getInfo(){
+                uexDownloaderMgr.getInfo(document.getElementById('downloadPath').value);
+            }
+            // 通过路径清除未完成下载的任务
+            function clearInfo(){
+            /**
+             * 通过路径清除未完成下载的任务
+             * clearTask(String inDLUrl,String inClearMode)
+             * @param {string} inDLUrl
+             * @param {string} inClearMode 清除模式。0代表只清除此次下载任务，并不清除已经下载的目标临时文件。
+             * 1代表清除此次下载任务，并且清除已经下载的目标临时文件。
+             * 当目标文件已经成功下载到本地后，此操作不能不能清除此目标文件。默认为0。
+             */
+                uexDownloaderMgr.clearTask(document.getElementById('downloadPath').value, "1");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="tit">
+            下载功能
+        </div>
+        <div class="conbor">
+            <div class="consj">
+                <span>下载地址：</span>
+                <input class="textbox" id="downloadPath" type="text" value="http://pic.pp3.cn/uploads//20121001j/bz/210.jpg">
+                <span>保存地址：</span>
+                <input class="textbox" id="savedPath" type="text" value="wgt://data/down/1284565196.jpg">
+                <input class="btn" type="button" value="下载文件" onclick="download();">
+                <span>文件下载状态</span>
+                <div class="tcxx" id="percentage">
+                </div>
+                <span>结束下载</span>
+                <input class="btn" type="button" value="结束下载" onclick="closeDownload();">
+                <span>得到下载信息</span>
+                <input class="btn" type="button" value="得到下载信息" onclick="getInfo();">
+                <span>文件信息</span>
+                <div class="tcxx1" id="fileInfo" style="word-break: break-all">
+                </div>
+                <span>清除下载信息</span>
+                <input class="btn" type="button" value="清除下载信息" onclick="clearInfo();">
+            </div>
+        </div>
+    </body>
+</html>

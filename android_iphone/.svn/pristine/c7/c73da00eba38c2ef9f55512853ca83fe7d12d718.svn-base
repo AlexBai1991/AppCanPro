@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/project/ui-res-v3.css">
+    <link rel="stylesheet" href="../css/project/ui-color-v3.css">
+    <link rel="stylesheet" href="../css/project/ui-btn-v3.css">
+    <link rel="stylesheet" href="../css/ui-base.css">
+    <link rel="stylesheet" href="../css/ui-box.css">
+    <link rel="stylesheet" href="../css/ui-color.css">
+    <link rel="stylesheet" href="../css/ui-btn.css">
+	<link rel="stylesheet" href="../css/ui-res.css">
+	<link rel="stylesheet" href="../css/pictureShow.css">
+	<link rel="stylesheet" href="../css/project/style.css">
+	<link rel="stylesheet" href="../app/css/ui-scm.css">
+    <script src="../js/zy_control.js"></script>
+    <script src="../js/zy_click.js"></script>
+
+
+</head>
+<body class="um-vp" ontouchstart>
+   <div id="page_0" class="up ub ub-ver" tabindex="0">
+        <!--header开始-->
+        <div id="header" class="ub uh c-blu t-wh">
+ 			<div class="umw4" ontouchstart="zy_touch('btn-act')" onclick="uexWindow.close('-1')">
+ 				<!--按钮开始-->
+				<div class="btn uinn uc-a bt-icon12 umh1-7 umw1-7 ub-img4"></div>
+				<!--按钮结束-->
+			</div>             
+			<h1 class="ut ub-f1 ulev0 ut-s tx-c">研究中心介绍</h1>
+			<div class="umw4" ontouchstart="zy_touch()" onclick="">
+            <!--插入按钮控件-->
+        	</div>
+        </div>
+        <!--header结束-->
+		
+		<!--content开始-->
+        <div id="content" class="ub-f1">
+              <div class="lab">
+              	  <h2>网络融合研究室</h2>
+                  <br/>
+				  
+                   <div id="teacher">
+                     <h3>一 研究室负责人介绍</h3> <br/>
+                      <p>
+                         <b>李慧：</b>
+                                                                     女，副教授，博士生导师。2005年至今在北京邮电大学信息与通信工程学院通信网技术教研中心工作，作为负责人主持了国家973课题、国家863课题等多项国家级和省部级科研项目，获国家技术发明奖二等奖一项、省部级科研奖励3项。
+                      </p> <br/>
+                      <p>
+                      	<b>主要研究方向：</b>
+						融合网络优化
+					  </p>
+                  </div><!--/teacher -->
+                  <br/>
+				  
+          <div id="member">
+                <h3>二 研究室成员</h3> <br/>
+                <p><b>组长：</b>郭俊虎</p><br/>
+                <p><b>成员：</b>曹蓓、高原、李剑飞、徐彤、王金宇、李明、王利鹏、于耀成、苏阳、韦永建、徐姣、徐重峰、何佳怡、刘诗川</p>
+         </div><!-- /member-->
+		 <br/>
+		 
+		 <div id="pic">
+		 	<img src="../image/li.jpg"/>
+		 </div>
+     
+			
+              </div>
+        </div>
+        <!--content结束-->
+		
+	
+     
+   </div><!--/page -->
+</body>
+
+<script>
+zy_init();
+window.uexOnload = function(type){
+    if (!type) {
+      
+    }
+	
+}
+
+function loadHtml(name,addr){
+	return uexWindow.open(name,'0',addr,'0','','','0','275');
+}
+</script>
+</html>
+

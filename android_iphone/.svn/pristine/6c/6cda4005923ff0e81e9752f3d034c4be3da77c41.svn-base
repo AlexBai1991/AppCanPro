@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/project/ui-res-v3.css">
+    <link rel="stylesheet" href="css/project/ui-color-v3.css">
+    <link rel="stylesheet" href="css/project/ui-btn-v3.css">
+	    <link rel="stylesheet" href="css/ui-btn.css">
+	    <link rel="stylesheet" href="css/ui-input.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+		<link rel="stylesheet" href="css/ui-res.css">
+        <link rel="stylesheet" href="app/css/ui-scm.css">
+		<link rel="stylesheet" href="css/project/style.css">
+        <script src="js/zy_control.js"></script>
+        <script src="js/zy_click.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/zy_json.js"></script>
+        <script>
+        </script>
+    </head>
+    <body class="um-vp c-wh" ontouchstart>
+        <div id="page_0" class="up ub ub-ver" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="uh ub c-blu t-wh">
+            	<!--按钮开始-->
+				<div onclick="uexWindow.close('-1')" class="btn uinn uc-a bt-icon21 umh1-7 umw1-7 ub-img4"></div>
+				<!--按钮结束-->
+                <h1 class="ut ub-f1 ulev0 ut-s tx-c" tabindex="0">意见反馈</h1>
+				<!--按钮开始-->
+				<div onclick="postForumDetail()" class="btn uinn uc-a bt-icon6 umh1-7 umw1-7 ub-img4"></div>
+				<!--按钮结束-->
+
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l t-bla">
+                <div class="ub ub-ver">
+                	<div class="uinn">
+                		<!--文本开始-->
+						<div class="ub t-bla ulab"> 
+						  	<div class="ub-f1 uba b-gra uinput uinn1 ub ub-ver umh9">  
+						 		<textarea placeholder="请输入您的反馈内容" name="area1" class="ub-f1" id="postcontent"></textarea> 
+						 	</div>
+						</div>
+						<!--文本结束-->
+                	</div>
+                </div>
+            </div>
+            <!--content结束--><!--footer开始-->
+            <div id="footer" class="uf c-m2 c-bla t-wh">
+            </div>
+            <!--footer结束-->
+        </div>
+    </body>
+    <script>
+    	zy_init();		
+		function postForumDetail(){
+//			var title = $$('title').value;
+			var content = $$('postcontent').value;
+		
+//	        if (!isDefine(title)) {
+//	            $toast('请输入帖子名!', 1500);
+//	            return;
+//	        }
+	        if (!isDefine(content)) {
+	            $toast('请输入反馈内容!', 1500);
+	            return;
+	        }
+//	        title = encodeURIComponent(title);
+	        content = encodeURIComponent(content);
+			//获取发帖人用户信息
+//			var username = window.localStorage['stuname'];
+//			username = encodeURIComponent(username);
+			
+			var url = 'http://10.108.90.35:8080/zendproject/TestProject/bni/ReturnAdvice.php?action=postAdvice&content='+content;
+			$toast('反馈意见提交中...');
+			$.getJSON(url,function(data){
+				$closeToast();
+				if(data.postAdviceInfo == '反馈成功'){
+					alert('反馈成功!');
+//					//存放帖子相关信息
+//					window.localStorage['id'] = data.postForumId;
+//					window.localStorage['title'] = $$('title').value;
+////					uexWindow.evaluateScript('listforum','0','refresh()');
+//					//打开帖子详细页面
+//					uexWindow.evaluateScript('listforum','0','getForumDetail()');
+//					uexWindow.close('-1');
+				}
+			},'json',getJSONError,'GET',null,true);
+		}
+    </script>
+</html>

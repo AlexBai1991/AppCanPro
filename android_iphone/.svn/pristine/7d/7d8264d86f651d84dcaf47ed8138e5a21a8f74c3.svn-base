@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1,er-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/project/ui-res-v3.css">
+    <link rel="stylesheet" href="../css/project/ui-color-v3.css">
+    <link rel="stylesheet" href="../css/project/ui-btn-v3.css">
+    	<link rel="stylesheet" href="../css/ui-btn.css">
+    	<link rel="stylesheet" href="../css/ui-img.css">
+    	<link rel="stylesheet" href="../css/ui-list.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+		<link rel="stylesheet" href="../css/ui-res.css">
+		<link rel="stylesheet" href="../css/project/style.css">
+        <script src="../js/zy_control.js">
+        </script>
+        <script src="../js/zy_click.js">
+        </script>
+    	<script src="../js/main.js"></script>
+        <script>
+        </script>
+    </head>
+    <body class="um-vp c-wh" ontouchstart>
+        <div id="page_0" class="up ub ub-ver" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="uh c-blu t-wh">
+				<div class="ub btn btn-l" onclick="uexWindow.close('-1')">       
+              		<!--按钮开始-->
+<div class="btn uinn uc-a bt-icon12 umh1-7 umw1-7 ub-img4"></div>
+<!--按钮结束-->
+       
+          		</div>
+                <h1 class="ut ulev0 ut-s tx-c" tabindex="0">王宏祥组</h1>
+            </div>
+            <!--header结束-->
+			
+			<!--content开始-->
+            <div id="content" class="ub-f1 tx-l t-bla">
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="chaidandan" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">柴丹丹</div>
+							<div class="ub">
+                            	<div class="ulev0 ub-f1 tx-r">组联系人</div>
+								<div class="ub-f1">　</div>
+							</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18811593775
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：937911850@qq.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                    </div>
+                </div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="qinjun" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">秦军</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18146509355
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：qinjun5566@126.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="wenhuashun" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">文化顺</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：13810271824
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：wenhs1055@gmail.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="yangye" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">杨烨</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18811596807
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：Jdcdyangye@163.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="xiaqing" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">夏青</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18511599294
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：xiaqing01@126.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="liangyangyang" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">梁洋洋</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18810768689
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：liangsdu2008@163.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="wangchi" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">王骋</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18910045253
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：1403749851@qq.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="wujuan" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">吴娟</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18610566319
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：mlwj303@163.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="heliang" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">何亮</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：13426005843
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：heliangzjz@163.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="gaoyanpeng" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">高延鹏</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：15210592747
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：egyptgao@163.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="yansha" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">颜莎</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18811720295
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：stefaniesha@126.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="wangyanyan" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">王彦彦</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：13366038083
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：wangyylucky@126.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            	<!--一个联系人开始-->
+                <div class="lihuistu" id="xinxin" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">辛欣</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18301533505
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：1207567851@qq.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+				<!--一个联系人开始-->
+                <div class="lihuistu" id="susuyan" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">苏素燕</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：13167523944
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：742738685@qq.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+				<!--一个联系人开始-->
+                <div class="lihuistu" id="yinian" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">易念</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18811720426
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：243775680@qq.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+				<!--一个联系人开始-->
+                <div class="lihuistu" id="liuchuan" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">刘川</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：15210806296
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：512101725@qq.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+				<!--一个联系人开始-->
+                <div class="lihuistu" id="yangyuqian" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">杨玉倩</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18301536921
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：1107505181@qq.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+				<!--一个联系人开始-->
+                <div class="lihuistu" id="zhaojingxi" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">赵静西</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18811727025
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：zhaojingxi_1990@163.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+				<!--一个联系人开始-->
+                <div class="lihuistu" id="zhaojingxi" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">李丰硕</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18810656067
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：fengshuo_li@163.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+				<!--一个联系人开始-->
+                <div class="lihuistu" id="zhaojingxi" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">崔嘉斌</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18601396551
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：708953841@qq.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+				<!--一个联系人开始-->
+                <div class="lihuistu" id="zhaojingxi" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">李根</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：15210922620
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：1036558817@qq.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+				<!--一个联系人开始-->
+                <div class="lihuistu" id="zhaojingxi" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">何超杰</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18811799296
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：iehechaojie@163.com
+
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+				<!--一个联系人开始-->
+                <div class="lihuistu" id="zhaojingxi" style="display:none;">
+                    <div style="width:100%;height:10em;" class="c-blu2 c-m2">
+                        <div class="ub ub-ver uinn6">
+                            <div class="ulev3">易留洋
+</div>
+                        </div>
+                    </div>
+                    <div class="uba b-gra c-wh">
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub ubb b-gra t-bla ub-ac umh4 lis">
+                            <li onclick="call(event)" class="ub-f1 ut-s" style="font-family:黑体;">
+                                手机：18811733386
+                            </li>
+                            <li class="ubl b-gra res11 lis-sw ub-img"></li>
+                        </ul>
+                        <ul ontouchstart="zy_touch('btn-act')" class="ub  t-bla ub-ac umh4 lis">
+                            <li class="ub-f1 ut-s" style="font-family:黑体;">
+                                邮箱：619911393@qq.com
+                            </li>
+                            <li class="ubl b-gra res12 lis-sw ub-img"></li>
+                        </ul>
+                	</div>
+				</div>
+            	<!--一个联系人结束-->
+            </div>
+            <!--content结束-->
+			
+			<!--footer开始-->
+            <div id="footer" class="uf c-m2 c-bla t-wh">
+            </div>
+            <!--footer结束-->
+        </div>
+    </body>
+    <script>
+    	zy_init();	
+		window.uexOnload = function(type){
+      		if(!type){
+      			displayUser();
+			}
+  		}
+		function call(event){
+//			alert(event.target.innerHTML.split('：')[1]);
+			uexCall.call(event.target.innerHTML.split('：')[1]);
+		}
+		
+		
+    </script>
+</html>

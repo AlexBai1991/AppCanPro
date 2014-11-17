@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+<title>
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/ui-btn.css">
+    <link rel="stylesheet" href="css/ui-input.css">
+    <link rel="stylesheet" href="css/ui-img.css">
+    <link rel="stylesheet" href="css/ui-res.css">
+    <link rel="stylesheet" href="css/ui-list.css">
+	<link rel="stylesheet" href="css/ui-base.css">
+	<link rel="stylesheet" href="css/ui-box.css">
+	<link rel="stylesheet" href="css/ui-color.css">
+	<link rel="stylesheet" href="css/project/style.css">
+	<script src="js/zy_control.js"></script>
+	<script src="js/zy_tmpl.js"></script>
+	<script src="js/zy_json.js"></script>
+	<script src="js/zy_click.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/zy_icache.js"></script>
+	<script></script>
+</head>
+<body class="um-vp" ontouchstart="">
+	<div id="detail">
+		
+	</div>
+	<br>
+	<br>
+	<br>
+	<div id="reply" style="position:fixed;left:0;bottom:0;display:block;width:100%;">
+        <div class="ub ub-ver c-gra">
+        	<div class="uinn">
+				<div class="ub t-bla ulab">  
+				 	<div class="ub-f1 uba b-gra us-i uinput uinn1 ub ub-ver c-wh">  
+				 		<input placeholder="回复内容" type="text" class="" id="replydetailcontent">   
+				  	</div>
+					<div ontouchstart="zy_touch('btn-act')" onclick="replyForumDetail()" class="btn uinn5 c-blu t-wh">确定</div>
+				</div>
+        	</div>
+        </div>
+
+		<!--注释
+		<div class="uinn ub ub-ver">
+			<div class="ub t-bla ulab"> 
+	 			<div class="ulim">回复帖子：</div>
+	  			<div class="ub-f1 uba b-gra uinput ub ub-ver">  
+	 				<textarea id="replycontent" placeholder="回复内容"  name="area1" class="ub-f1 umh6"></textarea> 
+				</div>
+			</div>
+			<div class="uinn">
+				<div ontouchstart="zy_touch('btn-act')" onclick="replyForumDetail()" class="btn uinn uc-a1 c-blu2 t-wh">提交回复</div>
+			</div>
+		</div>
+		-->
+	 </div>
+</body>
+<script>
+	zy_init();
+	window.uexOnload=function(type){
+		if(!type){
+//			zy_initcache(function() {	});		//图片缓存初始化函数
+			getForumDetail();
+		}
+	}		
+	//获得帖子发帖信息的id和title,获得之后清空id
+	var id = window.localStorage['id'];
+	var title = window.localStorage['title'];
+	window.localStorage['id'] = '';
+	window.localStorage['title'] = '';
+	
+	//获取帖子详细信息
+	function getForumDetail(){
+		var url = 'http://10.108.90.35:8080/zendproject/TestProject/bni/ReturnForum.php?action=getForumDetail&id='+id;
+		var tmpl = '<div ontouchstart="zy_touch(\'btn-act\')" class="c-wh ub uba b-gra" style="margin:0.3em auto;width:96%;">\
+				        <div class="ubr b-gra t-bla ub-ver uinn">\
+							<div class="lis-th2 ub-img5 uc-a1">\
+								<img src="${imgpath}" id="${origtime}_newid" class="inforpic" />\
+							</div>\
+							<div class="ulev-1 tx-c">${user}</div>\
+							<div class="ulev-1 tx-c">等级　</div>\
+						</div>\
+				        <div class="ub-f1 ub ub-ver uinn">\
+				            <div class="ulev-1 t-gra tx-r">${layer}</div>\
+				            <div class="ub-f1 ulev-1 umh4 t-bla" style="word-wrap:break-word;overflow:hidden;">${content}</div>\
+				            ${cb:img}\
+				            <div id="${detailid}_${user}_${content}" class="ub-f1 ulev-2 t-blu tx-r" onclick="openReplyInput(event)">回复</div>\
+				            <div class="ub ub-pj t-gra ulev-2">\
+				                <div class="umh2 umw2 ub-img im1"></div>\
+				                <div class="ub-f1">收藏数</div>\
+				                <div class="umh2 umw2 ub-img im2"></div>\
+				                <div class="ub-f1　tx-r">${actiontype}　${time}</div>\
+				            </div>\
+				        </div>\
+				</div>';
+		$.getJSON(url,function(data){
+			var list = data;
+			var i = 0;
+			var str = zy_tmpl(tmpl,list,zy_tmpl_count(list),function(v,k){
+				if(k[1] == 'img'){
+					if(isDefine(v.picpath)){
+						//picId.push(v.id);
+						//imgs.push(v.picpath);
+						return '<div class="ub ub-ac ub-pc"><div class="ub-f1 umh4 ub-img" style="background-image:url('+v.picpath+');width:16em;height:9em;"></div></div>';
+					}else{
+						return '';
+					}
+				}
+			});
+			setHtml('detail',str);
+		},'json',null,'GET',null,false);
+	}
+	//刷新帖子详细信息
+	function refresh(){
+		$.clearLS(url);
+		getForumDetail();
+	}
+	//回复帖子
+	function replyForumDetail(){
+		var replydetailcontent = $$('replydetailcontent').value;
+		if(!isDefine(replydetailcontent)){
+			$toast('请输入回复内容',1000);
+			return;
+		}
+		if(window.localStorage['replyDetailInfo']){
+			var replyDetailInfo = window.localStorage['replyDetailInfo'];
+			replyDetailInfo = encodeURIComponent(replyDetailInfo);
+			window.localStorage['replyDetailInfo'] = '';
+			//回复的具体内容
+			replydetailcontent = encodeURIComponent(replydetailcontent+'<br/><br/>')+replyDetailInfo;
+		}else{
+			replydetailcontent = encodeURIComponent(replydetailcontent);
+		}
+		//获取回帖人的用户信息
+		var username = window.localStorage['stuname'];
+		username = encodeURIComponent(username);
+		
+		var replyurl = 'http://10.108.90.35:8080/zendproject/TestProject/bni/ReturnForum.php?action=replyForumDetail&listid='+id+'&user='+username+'&replycontent='+replydetailcontent;
+		//获取楼层信息
+		var forumElement = $$('detail');
+		var layer = forumElement.children.length+1;
+		var replyLayer = layer+'楼';
+		var replytmpl = '<div ontouchstart="zy_touch(\'btn-act\')" class="c-wh ub uba b-gra uc-a1" style="margin:0.3em auto;width:96%;">\
+			        <div class="ubr b-gra t-bla ub-ver uinn">\
+						<div class="lis-th2 ub-img5 uc-a1">\
+							<img src="${imgpath}" id="${origtime}_newid" class="inforpic" />\
+						</div>\
+						<div class="ulev-1 tx-c">${user}</div>\
+						<div class="ulev-1 tx-c">等级　</div>\
+					</div>\
+			        <div class="ub-f1 ub ub-ver uinn">\
+			            <div id="layer" class="ulev-1 t-gra tx-r">'+replyLayer+'</div>\
+			            <div class="ub-f1 ulev-1 umh4 t-bla" style="word-wrap:break-word;overflow:hidden;">${content}</div>\
+			            <div id="${detailid}_${user}_${content}" class="ub-f1 ulev-2 t-blu tx-r" onclick="openReplyInput(event)">回复</div>\
+			            <div class="ub ub-pj t-gra ulev-2">\
+			                <div class="umh2 umw2 ub-img im1"></div>\
+			                <div class="ub-f1">收藏数</div>\
+			                <div class="umh2 umw2 ub-img im2"></div>\
+			                <div class="ub-f1　tx-r">回复于　${time}</div>\
+			            </div>\
+			        </div>\
+			</div>';
+
+		$toast('回复提交中...');
+		$.getJSON(replyurl,function(data){
+			$closeToast();
+			if(data[0].replyForumInfo == '回帖成功'){
+				var list = data;
+				var i = 0;
+				//回帖成功，将最新的回帖信息添加到队列中
+				var str = zy_tmpl(replytmpl,list,zy_tmpl_count(list));
+				forumElement.innerHTML = forumElement.innerHTML + str;
+				$$('replydetailcontent').value = "";
+				
+//				,function(v,k){
+//					if(k[1] == 'img'){
+//						alert(v.imgpath);
+////						imgId.push(v.origtime+"_newid");
+////						imgs.push(v.imgpath);
+//						return zy_imgcache(v.origtime+"_newid",i++,v.imgpath,null,null,null,'jpg');
+//					}
+//				}
+
+			}
+		},'json',null,'GET',null,false);
+	}
+	//回复具体某个帖子
+	function openReplyInput(event){
+		var replyInfo = event.target.id;
+		var replyId = replyInfo.split('_')[0];
+		var replyuser = replyInfo.split('_')[1];
+		var replycontent = replyInfo.split('_')[2];
+		if(replycontent.indexOf('【') >= 0){
+			replycontent = replycontent.split('<')[0];
+		}
+		window.localStorage['replyDetailInfo'] = '【在'+replyuser+'的"'+replycontent+'"中回复】';
+		//设置输入焦点
+		document.getElementById('replydetailcontent').focus();
+	}
+</script>
+</html>
