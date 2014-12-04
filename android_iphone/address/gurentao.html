@@ -4,9 +4,9 @@
         <title></title>
         <meta charset="utf-8">
         <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="../css/project/ui-res-v3.css">
-    <link rel="stylesheet" href="../css/project/ui-color-v3.css">
-    <link rel="stylesheet" href="../css/project/ui-btn-v3.css">
+	    <link rel="stylesheet" href="../css/project/ui-res-v3.css">
+	    <link rel="stylesheet" href="../css/project/ui-color-v3.css">
+	    <link rel="stylesheet" href="../css/project/ui-btn-v3.css">
     	<link rel="stylesheet" href="../css/ui-input.css">
     	<link rel="stylesheet" href="../css/ui-btn.css">
     	<link rel="stylesheet" href="../css/ui-img.css">
@@ -16,70 +16,62 @@
         <link rel="stylesheet" href="../css/ui-color.css">
 		<link rel="stylesheet" href="../css/ui-res.css">
 		<link rel="stylesheet" href="../css/project/style.css">
-        <script src="../js/zy_control.js">
-        </script>
-        <script src="../js/zy_click.js">
-        </script>
-        <script>
-        </script>
+        <script src="../js/zy_control.js"></script>
+        <script src="../js/zy_click.js"></script>
 		<style>
-			#all div {margin-top:0.2em;background-color:white;}
+			#all div {background-color:white;}
 		</style>
     </head>
     <body class="um-vp" style="background-color:#e9eaee;" ontouchstart>
-        <div id="page_0" class="up ub ub-ver" tabindex="0">
-            <div id="header" class="uh c-blu t-wh">
-	            <!--header开始-->
-				<div id="fanhui" style="display:block;">
-				<div class="ub btn btn-l" onclick="uexWindow.close('-1')">       
-              		<!--按钮开始-->
-<div class="btn uinn uc-a bt-icon12 umh1-7 umw1-7 ub-img4"></div>
-<!--按钮结束-->
        
-          		</div>
+	    <div id="page_0" class="up ub ub-ver" tabindex="0">
+            <!--header开始-->
+			<div id="header" class="uh c-blu t-wh">	            
+				<div id="fanhui" style="display:block;">
+					<div class="ub btn btn-l" onclick="uexWindow.close('-1')">       
+						<div class="btn uinn uc-a bt-icon12 umh1-7 umw1-7 ub-img4"></div>
+	          		</div>
 				</div>
-	            <!--按钮开始-->
 				<div id="allcheck" style="display:none;">
-	            <div class="ub btn btn-l" onclick="displayTool()">
-	                <div class="btn-nl"></div>
-	                <div class="btn-nc ub ub-ac ulim">取消</div>
-	                <div class="btn-nr"></div>
-	            </div>
-                <div class="ub btn btn-r" onclick="checkAll()">
-                    <div class="btn-nl"></div>
-                    <div class="btn-nc ub ub-ac ulim">全选</div>
-                    <div class="btn-nr"></div>
-                </div>
+		            <div class="ub btn btn-l" onclick="displayTool()">
+		                <div class="btn-nl"></div>
+		                <div class="btn-nc ub ub-ac ulim">取消</div>
+		                <div class="btn-nr"></div>
+		            </div>
+	                <div class="ub btn btn-r" onclick="checkAll()">
+	                    <div class="btn-nl"></div>
+	                    <div class="btn-nc ub ub-ac ulim">全选</div>
+	                    <div class="btn-nr"></div>
+	                </div>
 				</div>
-                <!--按钮结束-->
                 <h1 class="ut ulev0 ut-s tx-c" tabindex="0">顾仁涛组</h1>
          	</div>
             <!--header结束--><!--content开始-->
             <div id="content" class="ub-f1 t-bla">
-            	<div style="width:100%;height:0.5em;"></div>
-	            <div id="all" class="" style="margin:0 auto;width:95%;">
-	                <div id="zhangshizong" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	            <div id="all" class="" >
+	                <input type="checkbox" name="che1" class="uhide" value="">
+	                <div id="zhangshizong"  onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
-						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">张士宗</div>
+						<div class="uc-t c-m2 ub t-bla ub-ac">张士宗</div>
 						<div style="display:none;"><span>18810548667</span><span>zsz@bupt.edu.cn</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="mali" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="mali" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">马丽</div>
 						<div style="display:none;"><span>13161831546</span><span>rzmali@yeah.net</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="liuxinjun" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="liuxinjun" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">刘新军</div>
 						<div style="display:none;"><span>13121909825</span><span>liuxinjun.ok@hotmail.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="wangxiaoxiong" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="wangxiaoxiong" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">王肖雄</div>
@@ -87,84 +79,84 @@
 	                </div>
 
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="zangjunjie" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="zangjunjie" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">臧俊捷</div>
 						<div style="display:none;"><span>13121986098</span><span>916399256@qq.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="wuxiaoyu" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="wuxiaoyu" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">武晓宇</div>
 						<div style="display:none;"><span>13126904435</span><span>806582323@qq.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="panzhuoya" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="panzhuoya" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">潘卓娅</div>
 						<div style="display:none;"><span>18811714368</span><span>1152665160@qq.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="guotonglu" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="guotonglu" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">郭通禄</div>
 						<div style="display:none;"><span>13146094606</span><span>421221912@qq.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="gezhaozhi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="gezhaozhi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">葛钊志</div>
 						<div style="display:none;"><span>15652963432</span><span>ggygzz@126.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="zhangyuan" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="zhangyuan" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">张圆</div>
 						<div style="display:none;"><span>13811627241</span><span>471023839@qq.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="wanglei" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="wanglei" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">王磊</div>
 						<div style="display:none;"><span>15652961415</span><span>shi799415@163.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="jinweiqi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="jinweiqi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">金伟祺</div>
 						<div style="display:none;"><span>15652960923</span><span>jin791727783@163.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="wangxin" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="wangxin" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">王鑫</div>
 						<div style="display:none;"><span>18811781488</span><span>wx634603047@163.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="lilijun" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="lilijun" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">李丽君</div>
 						<div style="display:none;"><span>18810531453</span><span>rosamengta@163.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="weipei" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="weipei" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">魏培</div>
 						<div style="display:none;"><span>15901259606</span><span>baconbupt@gmail.com</span></div>
 	                </div>
 	                <input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">岑翼</div>
@@ -172,7 +164,7 @@
 						</div>
 	                </div>
 					<input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">王刚</div>
@@ -181,7 +173,7 @@
 </span></div>
 	                </div>
 				<input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">胡友强</div>
@@ -190,7 +182,7 @@
 </span></div>
 	                </div>
 					<input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub  ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">谭艳霞</div>
@@ -199,7 +191,7 @@
 						</div>
 	                </div>
 					<input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">谭奇</div>
@@ -208,28 +200,26 @@
 						</div>
 	                </div>
 					<input type="checkbox" name="che1" class="uhide" value="">
-	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub uc-a1 ubb b-gra t-bla uinn">
+	                <div id="cenyi" onclick="zy_for(event)" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend(event)" class="ub ubb b-gra t-bla uinn">
 	                    <div class="che-icon ub-img umw1" style="display:none;margin-right:1em;"></div>   
 	                    <div class="lis-icon ub-img im3"></div>                 
 						<div ontouchstart="zy_touch('btn-act')" class="uc-t c-m2 ub t-bla ub-ac">王思雨</div>
 						
 						<div style="display:none;"><span>15117942762</span><span>752363594@qq.com</span></div>
-						</div>
-	                </div>
+					</div>
+                </div>
 
-                <div id="msgmail" class="uba c-gra c-m2 b-gra umh4 uinn" style="position:fixed;left:0;bottom:0;width:100%;display:none;">
-					<!--块容器开始-->
+                <div id="msgmail" class="uba c-gra c-m2 b-gra umh4" style="position:fixed;left:0;bottom:0;width:100%;display:none;">
 					<div class="ub t-bla">	
 	                    <div class="ub ub-ver ub-pc ub-ac ub-f1">
-	                        <div onclick="sendMsg()" class="ub ub-img uinn im8" style="width:100%;height:0.6em;"></div>
-							<div class="uinn ulev-2">　短　信</div>
+	                        <div onclick="sendMsg()" class="ub ub-img im8" style="margin-top:0.5em;width:1.5em;height:1.5em;"></div>
+							<div class=" ulev-2">短信</div>
 	                    </div>
 	                    <div class="ub ub-pc ub-ver ub-f1 ub-ac">
-	                        <div onclick="sendMail()" class="ub uinn ub-img im7" style="width:100%;height:0.5em;"></div>
-							<div class="uinn ulev-2">　邮　件</div>
+	                        <div onclick="sendMail()" class="ub ub-img im7" style="margin-top:0.5em;width:1.5em;height:1.5em;"></div>
+							<div class=" ulev-2">邮件</div>
 	                    </div>
 					</div>
-					<!--块容器结束-->
 				</div>
             </div>
             <!--content结束--><!--footer开始-->
@@ -255,7 +245,7 @@
 					oCheck[i].checked = false;
 				}
 			}
-		}
+		}		
 		//长按菜单
 		var timeOutEvent = null;//定时器  
 		var flag = false;
@@ -266,7 +256,7 @@
 		    clearTimeout(timeOutEvent);//清除定时器  
 		    if(timeOutEvent != null){
 				if(flag == false){
-					var id = event.target.id;
+					var id = (event.target.id == "") ? event.target.parentNode.id : event.target.id;
 //					alert(id);
 					window.localStorage['lianxirenID'] = id;
 					uexWindow.open('gurentaogroup',0,'gurentaogroup.html',10,'','',0);

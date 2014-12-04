@@ -2,7 +2,7 @@ var isPhone = (window.navigator.platform != "Win32");
 var isAndroid = (window.navigator.userAgent.indexOf('Android')>=0)?true : false;
 
 /**
- * @param String inWndName 新窗口名称
+ * @param String inWndName  新窗口名称
  * @param String html		新窗口路径
  * @param String inAniID	打开动画
  * @param String f
@@ -65,7 +65,7 @@ function fucCheckLength(strTemp) {
 }
 
 /**
- * 输出loag
+ * 输出log
  * @param String s 需要输出的信息
  * @param String a 添加的标注信息
  */
@@ -83,7 +83,7 @@ function logs(s,a){
 
 /**
  * localStorage保存数据
- * @param String key  保存数据的key值
+ * @param String key    保存数据的key值
  * @param String value  保存的数据
  */
 function setLocVal(key,value){
