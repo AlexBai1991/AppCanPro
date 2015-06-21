@@ -1,2 +1,1 @@
-console.log("Hello Git!");
-console.log("Git is awsome!");
+VimCrypt~01!i5{ÍNØOk¥Ò2ƒldžÝ—¨E­ºl1MlòÑéd×ª) â–ƒÄŠ3"ï7Œg¶šcíëªK)à®ÉÃ½Ø8ÜijDæŽi•h¾‘ùå’>£e°>
