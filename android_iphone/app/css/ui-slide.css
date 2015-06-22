@@ -1,0 +1,23 @@
+.circle {
+    position: absolute;
+    left: 0;
+   	bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+	line-height: 1.5em;
+	padding-top: 0.4em;
+}
+
+.circle span {
+    width: 0.6em;
+    height: 0.6em;
+    display: inline-block;
+    margin: 0.3em;
+    border-radius: 10em;
+    background-color: #dcdcdc;
+}
+
+.circle span.cur {
+    background-color: #FF8000;
+}

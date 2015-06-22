@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/project/ui-res-v3.css">
+    <link rel="stylesheet" href="css/project/ui-color-v3.css">
+    <link rel="stylesheet" href="css/project/ui-btn-v3.css">
+    	<link rel="stylesheet" href="css/ui-img.css">
+    	<link rel="stylesheet" href="css/ui-list.css">
+    	<link rel="stylesheet" href="css/ui-btn.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+		<link rel="stylesheet" href="css/ui-res.css">
+        <link rel="stylesheet" href="app/css/ui-scm.css">
+		<link rel="stylesheet" href="css/project/style.css">
+        <script src="js/zy_control.js"></script>
+        <script src="js/zy_click.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/zy_json.js"></script>
+		<script src="js/zy_tmpl.js"></script>
+        <script></script>
+    </head>
+    <body class="um-vp c-wh" ontouchstart>
+        <div id="page_0" class="up ub ub-ver" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="uh c-blu t-wh">
+				<div class="ub btn btn-l" onclick="uexWindow.close('-1')">       
+              		<!--按钮开始-->
+					<div class="btn uinn uc-a bt-icon12 umh1-7 umw1-7 ub-img4"></div>
+					<!--按钮结束-->
+          		</div>
+                <h1 class="ut ulev0 ut-s tx-c" tabindex="0">资源共享</h1>
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l t-bla">
+				
+				<div id="resourceList" class="ubt b-gra">
+					<!--列表开始-->
+					<!--
+					<div class="ub ub-ver">
+						<div class="uba b-gra uinn tx-c"><b>论文题目</b></div>
+						<div class="ub ubb b-gra uinn6 ulev-1">
+							<div class="ub-f1 ubr b-gra ">姓名:小白</div>
+							<div class="ub-f1">学号:2013140075</div>
+						</div>
+						<div class="ubb b-gra uinn">论文简介论文简介论文简介论文简介论文简介论文简介论文简介论文简介论文简介论文简介论文简介论文简介论文简介论文简介</div>
+						<div class="uinn5">
+							<div class="uba uinn b-gra uc-a1">论文查看</div>
+						</div>
+					</div>-->
+				</div>
+				
+				
+            </div>
+            <!--content结束--><!--footer开始-->
+            <div id="footer" class="uf c-m2 c-bla t-wh">
+            </div>
+            <!--footer结束-->
+        </div>
+    </body>
+    <script>
+    	zy_init();
+		var inOpCode = 1;	//任务id
+        var cText = 0;
+        var cJson = 1;
+        var cInt = 2;
+		
+
+		var resourceid = window.localStorage['resourceId'];
+		window.uexOnload = function(type){
+			if (!type) {
+				getResourceDetail(); //获取具体的资源信息
+			}			
+
+            //下载状态监听方法
+            uexDownloaderMgr.onStatus = function(opCode, fileSize, percent, status){
+                switch (status) {
+                    case 0://下载过程中
+                        //document.getElementById('percentage').innerHTML = "文件大小：" + fileSize + "字节<br>下载进度：" + percent;
+                        break;
+                    case 1://下载完成
+                        //alert("下载完成");
+						if(window.localStorage['paperName']){
+							var lsPaperName = window.localStorage['paperName'];
+							window.localStorage['paperName'] = '';
+							//下载完成，打开下载的pdf文件
+							$closeToast();
+							uexPDFReader.openPDFReader("wgt://"+lsPaperName);
+						}
+                        uexDownloaderMgr.closeDownloader(opCode);//下载完成要关闭下载对象
+                        break;
+                    case 2://下载失败
+                        alert("下载失败");
+                        uexDownloaderMgr.closeDownloader(opCode);//下载失败要关闭下载对象
+                        break;
+                }
+            }
+
+		}
+		
+		var resourceUrl = 'http://10.108.90.35:8080/zendproject/TestProject/bni/ReturnResource.php?id='+resourceid;
+		
+		//获得资源
+		function getResourceDetail(){
+			var templ = '<div class="ub ub-ver">\
+							<div class="uinn tx-c"><b>${title}</b></div>\
+							<div class="ub umh3 uinn6 ulev-1">\
+								<div class="ub-f1 tx-c">作者：${name}</div>\
+								<div class="ub-f1 tx-c">学号：${stuid}</div>\
+							</div>\
+							<div class="uinn" style="min-height:10em;"><div class="uinn">论文简介：<br></div><div>　　${intro}</div></div>\
+							<div class="uinn5">\
+								<div class="uinn uba b-gra tx-c uc-a1 c-m2" onclick="checkPaper(\'${paperpath}\')" style="background-color:#e9eaee;">论文查看</div>\
+							</div>\
+						</div>';
+			$.getJSON(resourceUrl, function(data){
+				var str = zy_tmpl(templ,data,zy_tmpl_count(data));
+				setHtml('resourceList', str);
+			},'json',null,'GET',null,true);
+		}
+		
+		//下载论文到本地，并查看之
+		function checkPaper(downPath){
+			var paperName = downPath.split('/')[6];
+			window.localStorage['paperName'] = paperName;	//把论文名称存到localStorage里
+			//创建下载对象的回调函数
+			uexDownloaderMgr.cbCreateDownloader = function(opCode, dataType, data){
+                switch (dataType) {
+                    case cText:
+                        alert("uex.cText");
+                        break;
+                    case cJson:
+                        alert("uex.cJson");
+                        break;
+                    case cInt:
+                        if (data == 0) {
+                            //alert("创建成功");
+                            //uexDownloaderMgr.download(inOpCode, downPath, "wgt://"+paperName, '1');
+				   			//判断文件是否存在回调方法
+							uexFileMgr.cbIsFileExistByPath = function(opCode, dataType, data) {
+				                switch (dataType) {
+					                case cText:
+					                    alert("uex.cText");
+					                    break;
+					                case cJson:
+					                    alert("uex.cJson");
+					                    break;
+					                case cInt:
+					                    if (data == 0) {
+					                        //alert("文件不存在");
+											$toast("正在打开.....");
+											uexDownloaderMgr.download(inOpCode, downPath, "wgt://"+paperName, '1');
+					                        //uexPDFReader.openPDFReader("wgt://"+paperName);
+					                    } else if (data == 1) {
+											//alert("文件存在");
+					                        uexPDFReader.openPDFReader("wgt://"+paperName);
+					                    } else {
+					                        alert(data);
+					                    }
+					                    break;
+					                default:
+					                    alert("error");
+					            }
+				            }
+
+ 							//首先判断文件是否存在，若存在直接打开，否则下载之
+							uexFileMgr.isFileExistByPath(inOpCode, "wgt://"+paperName);
+
+                        }
+                        else {
+                            alert("创建失败");
+                        }
+                        break;
+                    default:
+                        alert("error");
+                }
+			}
+			uexDownloaderMgr.createDownloader(inOpCode);	//创建一个下载对象
+		}
+
+    </script>
+</html>

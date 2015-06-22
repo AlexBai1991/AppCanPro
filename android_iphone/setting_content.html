@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+<title>
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/ui-img.css">
+    <link rel="stylesheet" href="css/ui-res.css">
+    <link rel="stylesheet" href="css/ui-list.css">
+	<link rel="stylesheet" href="css/ui-base.css">
+	<link rel="stylesheet" href="css/ui-box.css">
+	<link rel="stylesheet" href="css/ui-color.css">
+<script src="js/zy_control.js"></script>
+<script src="js/zy_click.js"></script>
+<script src="js/main.js"></script>
+<script></script>
+</head>
+<body class="um-vp" ontouchstart>
+<!--列表开始-->
+<div class="">
+	<br>
+	　用户管理
+	<ul ontouchstart="zy_touch('btn-act')" onclick="checkLogin('userInfo','userInfo.html')" class="uba c-wh uc-a1 b-gra ub t-bla ub-ac lis" style="width:90%;margin:2px auto;">
+        <li class="lis-icon ub-img" style="background-image: url('css/img/user.png')">
+        </li>
+        <li class="ub-f1 ulev-1 ut-s">
+            个人中心
+        </li>
+        <li class="res8 lis-sw ub-img">
+        </li>
+    </ul>
+	<br>
+	　系统设置
+    <ul ontouchstart="zy_touch('btn-act')" class=" ub c-wh  uba b-gra uc-t1 t-bla ub-ac lis" style="width:90%;margin:0 auto;">
+        <li class="lis-icon ub-img im4">
+        </li>
+        <li class="ub-f1 ulev-1 ut-s">
+            版本号:V 1.0
+        </li>
+    </ul>
+    <ul ontouchstart="zy_touch('btn-act')" class=" ub c-wh  ubl ubr ubb b-gra t-bla ub-ac lis" style="width:90%;margin:0 auto;">
+        <li class="lis-icon ub-img im5">
+        </li>
+        <li class="ub-f1 ulev-1 ut-s">
+            检查更新
+        </li>
+        <li class="res8 lis-sw ub-img">
+        </li>
+    </ul>
+    <ul ontouchstart="zy_touch('btn-act')" class=" ub c-wh  ubl ubr ubb b-gra uc-b1 t-bla ub-ac lis" style="width:90%;margin:0 auto;">
+        <li class="lis-icon ub-img im6">
+        </li>
+        <li class="ub-f1 ulev-1 ut-s">
+            关于
+        </li>
+        <li class="res8 lis-sw ub-img">
+        </li>
+    </ul>
+    <ul ontouchstart="zy_touch('btn-act')" class="uc-a c-red1 ub t-bla ub-ac lis" style="width:95%;margin:2em auto;" onclick="exitLogin()">
+        <li class="ub-f1 ulev-1 tx-c ut-s">
+            退出登录
+        </li>
+    </ul>
+</div>
+<!--列表结束-->
+</body>
+<script>
+	zy_init();
+	window.uexOnload=function(type){
+		if(!type){
+		}
+	}
+	//根据用户显示相应的头像，并支持用户自定义头像
+	//思路【1.先从服务器段获取默认的头像 2.用户自定义头像（拍照上传/选择相册头像），注意在选择头像的同时，也将头像转存到本机的指定头像目录
+	//	    3.用户上传已选择头像到服务器指定目录，并将存放路径写入到相应的数据库表中 】
+	function changeHeadImg(){
+		
+	}
+</script>
+</html>
