@@ -1,16 +1,5 @@
-## readme
-### hello Git
-# hello git 
-### hello github
-HAHAHAHAHAHHAAHHAHAHA
+## AppCan Project for HandBNI
 
-[HELLO](www.baidu.com)
-#我不知道能不能搞定冲突啊!
-=======
-AppCanPro
-=========
+* HandBNI is an app developed by AppCan.
 
-AppCan Project for HandBNI
-HandBNI is an app developed by AppCan.
-
-upadate files related to address 12.04 2014
+* upadate files related to address 12.04 2014
